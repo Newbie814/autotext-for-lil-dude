@@ -1,4 +1,4 @@
-# from credentials import liamNum
+from credentials import liamNum
 import requests
 import schedule
 import time
@@ -13,7 +13,7 @@ import time
 
 def send_message():
   resp = requests.post('https://textbelt.com/text', {
-    'phone': '15128930922',
+    'phone': liamNum,
     'message': 'This reminder was sent from a Python script. Clean your teeth, Lil Dude! Text me if you receive this message.',
     'key': 'textbelt'
   })
